@@ -2,10 +2,36 @@
 <html>
     <head>
         <title>F/GO Calendar</title>
+        <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://unpkg.com/@fullcalendar/core@4.2.0/main.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/@fullcalendar/daygrid/main.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/@fullcalendar/bootstrap@4.2.0/main.min.css">
+
+        <!-- <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script> -->
+        <script src="https://unpkg.com/@fullcalendar/core@4.2.0/main.min.js"></script>
+        <script src="https://unpkg.com/@fullcalendar/daygrid/main.min.js"></script>
+        <script src="https://unpkg.com/@fullcalendar/bootstrap@4.2.0/main.min.js"></script>
+
+        <!-- <script src="https://unpkg.com/moment@2.24.0/min/moment.min.js"></script> -->
+        <!-- <script src="https://unpkg.com/fullcalendar@3.10.0/dist/fullcalendar.js"></script> -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+      
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    plugins: [ 'dayGrid' ],
+                    themeSystem: 'bootstrap'
+                });
+                calendar.render();
+            });
+        </script>
     </head>
 
     <body>
         ASDF
+        <div id='calendar'></div>
     </body>
 
 </html>
